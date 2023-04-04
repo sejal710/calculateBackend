@@ -39,7 +39,7 @@ userRouter.post("/login",async(req,res) => {
     }
  })
 
- userRouter.get("/:id",async(req,res) => {
+ userRouter.get("/getProfile/:id",async(req,res) => {
     const {id} = req.params;
     console.log(req.params);
     try{
