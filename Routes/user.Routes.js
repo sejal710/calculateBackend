@@ -45,7 +45,7 @@ userRouter.post("/login",async(req,res) => {
     try{
      const user = await userModel.findById(id);
      if(user){
-        res.json({Name:user.name,Email:user.email})
+        res.json({Name:user.name,Email:user.email,timestamp: new Date()})
      }
     }
     catch(e){
